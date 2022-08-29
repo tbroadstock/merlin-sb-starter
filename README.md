@@ -20,12 +20,8 @@ work with in future development.
 
 ## Configuration
 
-Application configuration data is stored in Java properties files located in the `src/main/resources` directory.
-The property files are named to match a corresponding `spring.active.profiles` value, if present in the environment:
-
-* **application.properties** - stores properties for all profiles
-* **application-dev.properties** - stores properties for the dev profile; overrides application.properties
-* **application-prod.properties** - stores properties for the prod profile; overrides application.properties
+Application configuration data is stored in a file called `application.yaml` located in the `src/main/resources` directory.
+It contains multiple profile sections that correspond to the `spring.active.profiles` value, if present in the environment.
 
 ## Dependencies
 
