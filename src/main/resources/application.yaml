@@ -1,0 +1,38 @@
+# Set debugging level by package name
+logging:
+  level:
+    net:
+      merlin: INFO
+
+---
+# Define configuration for development environment
+spring:
+  config:
+    activate:
+      on-profile: dev
+
+# Set debugging level by package name
+logging:
+  level:
+    net:
+      merlin: DEBUG
+
+# Display Spring Actuator endpoint in Swagger
+springdoc:
+  show-actuator: true
+
+---
+# Define configuration for production environment
+spring:
+  config:
+    activate:
+      on-profile: prod
+
+# Set debugging level by package name
+logging:
+  level:
+    net:
+      merlin: WARN
+
+server:
+  port: 9999
